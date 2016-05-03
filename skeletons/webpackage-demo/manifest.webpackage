@@ -1,0 +1,88 @@
+{
+    "name": "{{wpName}}",
+    "groupId": "{{wpGroupId}}",
+    "version": "0.1.0-SNAPSHOT",
+    "modelVersion": "8.3.0",
+    "docType": "webpackage",
+    "author": {
+        "name": "{{wpAuthorName}}",
+        "email": "{{wpAuthorEmail}}"
+    },
+    "license": "MIT",
+    "keywords": [],
+    "man": [],
+    "artifacts": {
+        "apps": [
+            {
+                "artifactId": "app",
+                "description": "This is a simple pre-generated app.",
+                "runnables": [
+                    {
+                        "name": "My Hello World App.",
+                        "path": "/index.html",
+                        "description": "Call this app as a simple demo."
+                    }
+                ]
+            }
+        ],
+        "elementaryComponents": [
+            {
+                "artifactId": "elem-one",
+                "description": "This is an elementary-component based on Polymer.",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app..."
+                    }
+                ],
+                "slots": [
+                    {
+                        "slotId": "a",
+                        "type": "number",
+                        "direction": [
+                            "input",
+                            "output"
+                        ],
+                        "value": 10
+                    }
+                ],
+                "endpoints": [
+                    {
+                        "endpointId": "main",
+                        "description": "This is recommended for you use with webcomponents.",
+                        "resources": [
+                            "elem-one.html"
+                        ],
+                        "dependencies": [
+                            "cubx.core.rte@1.8.0/cubxpolymer/main"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "utilities": [
+            {
+                "artifactId": "util1",
+                "description": "This util changes the background color after loading the document",
+                "runnables": [
+                    {
+                        "name": "demo",
+                        "path": "/demo/index.html",
+                        "description": "Demo app for this component..."
+                    }
+                ],
+                "endpoints": [
+                    {
+                        "endpointId": "html-import",
+                        "resources": [
+                            "html-import.html"
+                        ],
+                        "dependencies": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

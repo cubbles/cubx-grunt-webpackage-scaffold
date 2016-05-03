@@ -1,0 +1,19 @@
+<link rel="import" href="{{artifactId}}-style.html">
+<dom-module id="{{artifactId}}">
+
+    <template>
+        <style include="main-style"></style>
+        <style include="{{artifactId}}-style"></style>
+        <p>{{artifactId}}</p>
+        <section>
+            <article>
+
+                <label for="slota">Slot a</label>
+                <input type="number" id="slota" on-change="inputFieldSlotAChanged">
+
+            </article>
+        </section>
+    </template>
+
+    <script src="{{artifactId}}.js"></script>
+</dom-module>

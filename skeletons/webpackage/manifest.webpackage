@@ -1,0 +1,32 @@
+{
+  "name": "{{wpName}}",
+  "groupId": "{{wpGroupId}}",
+  "version": "0.1.0-SNAPSHOT",
+  "modelVersion": "8.3.0",
+  "docType": "webpackage",
+  "author": {
+    "name": "{{wpAuthorName}}",
+    "email": "{{wpAuthorEmail}}"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "man": [],
+  "artifacts": {
+    "apps": [
+      {
+        "artifactId": "app",
+        "description": "This is a simple pre-generated app.",
+        "runnables": [
+          {
+            "name": "app",
+            "path": "/index.html",
+            "description": "Call this app as a simple demo."
+          }
+        ]
+      }
+    ],
+    "elementaryComponents": [],
+    "compoundComponents": [],
+    "utilities": []
+  }
+}
