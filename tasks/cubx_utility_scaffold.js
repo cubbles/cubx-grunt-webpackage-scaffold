@@ -2,10 +2,8 @@
 'use strict';
 var utils = require('../lib/utils');
 module.exports = function (grunt) {
-
   // define a task starting with '+' if your task should be listed as one of the top tasks
   grunt.registerTask('+webpackage-createUtility', 'Scaffold a new Utility in a Webpackage.', function () {
-
     var updateManifest = function (answers, done) {
       var manifestWebpackagePath = grunt.config.get('manifestWebpackagePath');
       var manifest = grunt.file.readJSON(manifestWebpackagePath);
@@ -54,6 +52,5 @@ module.exports = function (grunt) {
 
     var options = require('../lib/config/utility-options.js')(grunt);
     require('../lib/scaffolder.js')(grunt, this, options, updateManifest);
-
   });
 };

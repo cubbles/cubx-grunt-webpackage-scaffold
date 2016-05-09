@@ -2,10 +2,8 @@
 'use strict';
 
 module.exports = function (grunt) {
-
   // define a task starting with '+' if your task should be listed as one of the top tasks
   grunt.registerTask('_createWebpackageDemo', 'Scaffold a Demo-Webpackage.', function () {
-
     var updateWorkspaceConfig = function (answers, done) {
       var workspaceConfigPath = grunt.config.get('workspaceConfigPath');
       var workspaceConfigJSON = grunt.file.readJSON(workspaceConfigPath);
