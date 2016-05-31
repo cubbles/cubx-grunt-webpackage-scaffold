@@ -9,8 +9,8 @@
     "email": "{{wpAuthorEmail}}"
   },
   "license": "MIT",
-  "keywords": [],
-  "man": [],
+  "keywords": [ ],
+  "man": [ ],
   "artifacts": {
     "apps": [
       {
@@ -23,10 +23,21 @@
             "description": "Call this app as a simple demo."
           }
         ]
+      },
+      {
+        "artifactId": "docs",
+        "description": "Generated webpackage documentation.",
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/index.html",
+            "description": "Show the interface of this component."
+          }
+        ]
       }
     ],
-    "elementaryComponents": [],
-    "compoundComponents": [],
-    "utilities": []
+    "elementaryComponents": [ ],
+    "compoundComponents": [ ],
+    "utilities": [ ]
   }
 }

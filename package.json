@@ -24,12 +24,12 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "lodash": "^3.10",
-    "wordwrap": "^1.0.0",
+    "cubx-webpackage-document-api": "^3.0.0",
     "inquirer": "^0.8.5",
-    "wrench": "^1.5.7",
+    "lodash": "^3.10",
     "mustache": "^2.2.0",
-    "cubx-webpackage-document-api": "^3.0.0"
+    "wordwrap": "^1.0.0",
+    "wrench": "^1.5.9"
   },
   "devDependencies": {
     "eslint": "^2.4.0",

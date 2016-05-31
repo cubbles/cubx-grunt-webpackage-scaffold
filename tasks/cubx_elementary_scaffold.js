@@ -16,6 +16,11 @@ module.exports = function (grunt) {
               name: 'demo',
               path: '/demo/index.html',
               description: 'Demo app...'
+            },
+            {
+              name: 'docs',
+              path: '/index.html',
+              description: 'Show the interface of this component.'
             }
           ],
           endpoints: [
@@ -26,7 +31,7 @@ module.exports = function (grunt) {
                 answers.artifactId + '.html'
               ],
               dependencies: [
-                'cubx.core.rte@1.8.0/cubxpolymer/main'
+                'cubx.core.rte@1.9.0/cubxpolymer/main'
               ]
             }
           ],

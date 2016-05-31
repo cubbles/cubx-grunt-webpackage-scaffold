@@ -16,6 +16,11 @@ module.exports = function (grunt) {
               name: 'demo',
               path: '/demo/index.html',
               description: 'Demo app...'
+            },
+            {
+              name: 'docs',
+              path: '/index.html',
+              description: 'Show the interface and dataflow of this component.'
             }
           ],
           endpoints: [
