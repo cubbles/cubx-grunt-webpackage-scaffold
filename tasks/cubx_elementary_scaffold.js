@@ -19,7 +19,7 @@ module.exports = function (grunt) {
             },
             {
               name: 'docs',
-              path: '/index.html',
+              path: '/docs/index.html',
               description: 'Show the interface of this component.'
             }
           ],
