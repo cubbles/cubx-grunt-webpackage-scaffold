@@ -31,7 +31,7 @@ module.exports = function (grunt) {
                 answers.artifactId + '.html'
               ],
               dependencies: [
-                'cubx.core.rte@1.9.0/cubxpolymer/main'
+                'cubx.core.rte@1.10.0/cubxpolymer/main'
               ]
             }
           ],
