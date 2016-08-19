@@ -23,13 +23,13 @@ module.exports = function (grunt) {
               description: 'Show the interface and dataflow of this component.'
             }
           ],
-          endpoints: [
+          resources: [
+            'css/' + answers.artifactId + '.css'
+          ],
+          dependencies: [
             {
-              endpointId: 'main',
-              resources: [
-                'css/' + answers.artifactId + '.css'
-              ],
-              dependencies: []
+              webpackageId: 'my-webpackage@1.2.3',
+              artifactId: 'my-artifact'
             }
           ],
           slots: [
@@ -44,7 +44,7 @@ module.exports = function (grunt) {
           members: [
             {
               memberId: 'member1',
-              componentId: 'webpackage@version/artifactId'
+              artifactId: 'my-artifact'
             }
           ],
           connections: [

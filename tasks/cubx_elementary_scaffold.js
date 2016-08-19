@@ -23,16 +23,13 @@ module.exports = function (grunt) {
               description: 'Show the interface of this component.'
             }
           ],
-          endpoints: [
+          resources: [
+            answers.artifactId + '.html'
+          ],
+          dependencies: [
             {
-              endpointId: 'main',
-              description: 'This is recommended for you use with webcomponents.',
-              resources: [
-                answers.artifactId + '.html'
-              ],
-              dependencies: [
-                'cubx.core.rte@1.10.0/cubxpolymer/main'
-              ]
+              webpackageId: 'cubx.core.rte@2.0.0',
+              artifactId: 'cubxpolymer'
             }
           ],
           slots: [

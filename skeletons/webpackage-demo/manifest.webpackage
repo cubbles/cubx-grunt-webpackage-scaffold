@@ -2,7 +2,7 @@
   "name": "{{wpName}}",
   "groupId": "{{wpGroupId}}",
   "version": "0.1.0-SNAPSHOT",
-  "modelVersion": "8.3.1",
+  "modelVersion": "9.1.0",
   "docType": "webpackage",
   "author": {
     "name": "{{wpAuthorName}}",
@@ -52,6 +52,15 @@
             "description": "Show the interface of this component."
           }
         ],
+        "resources": [
+          "elem-one.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.0.0",
+            "artifactId": "cubxpolymer"
+          }
+        ],
         "slots": [
           {
             "slotId": "a",
@@ -61,18 +70,6 @@
               "output"
             ],
             "value": 10
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "elem-one.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@1.10.0/cubxpolymer/main"
-            ]
           }
         ]
       }
@@ -88,16 +85,13 @@
             "description": "Demo app for this component..."
           }
         ],
-        "endpoints": [
-          {
-            "endpointId": "html-import",
-            "resources": [
-              "html-import.html"
-            ],
-            "dependencies": [
-            ]
-          }
+
+        "resources": [
+          "html-import.html"
+        ],
+        "dependencies": [
         ]
+
       }
     ]
   }

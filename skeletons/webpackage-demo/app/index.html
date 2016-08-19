@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>app</title>
 
-    <script src="../../cubx.core.rte@1.10.0/webcomponents/webcomponents-lite.js"></script>
+    <script src="../../cubx.core.rte@2.0.0/webcomponents/webcomponents-lite.js"></script>
 
     <!--
         Declare a CRCInit-Object used to initialize the CRC (Client-Runtime-Container):
@@ -16,7 +16,11 @@
         window.cubx = {
             CRCInit: {
                 rootDependencies: [
-                    "this/util1/html-import"
+                    {
+                        // webpackgeId='xxx@1.2.3' use this attribute, if the dependny not in own webpackage
+                        artifactId: 'util1'
+                    }
+
                 ]
             }
         }
@@ -29,21 +33,14 @@
             Want to add a 'main' -script to be executed after the dependencies have been loaded?
             If yes, add the following attribute: data-crc-main="js/my-script.js"
     -->
-    <script src="../../cubx.core.rte@1.10.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+    <script src="../../cubx.core.rte@2.0.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
 
 </head>
 <body>
+<!--  Place cubbles components there. -->
 <h1>Hello World!</h1>
 
-<!--
-    The cubbles client-runtime-container is bound to the next element.
-    Place Cubbles-Component there as child element.
-    Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
--->
-<div cubx-core-crc>
-    <elem-one cubx-dependency="this/elem-one/main"></elem-one>
-</div>
-
+<elem-one cubx-webpackage="this"></elem-one>
 
 </body>
 </html>

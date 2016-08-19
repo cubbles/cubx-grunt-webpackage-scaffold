@@ -10,23 +10,10 @@ module.exports = function (grunt) {
       var artifactObject = {
         artifactId: answers.artifactId,
         description: answers.description,
-        endpoints: [
-          {
-            endpointId: 'main',
-            resources: [
-              'js/util.js'
-            ],
-            dependencies: []
-          },
-          {
-            endpointId: 'html-import',
-            description: 'This is recommended for you use with webcomponents.',
-            resources: [
-              'html-import.html'
-            ],
-            dependencies: []
-          }
-        ]
+        resources: [
+          'html-import.html'
+        ],
+        dependencies: []
       };
 
       // make sure the artifact-type section does exist
