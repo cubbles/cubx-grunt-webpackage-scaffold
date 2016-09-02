@@ -16,6 +16,11 @@ module.exports = function (grunt) {
   var manifestWebpackagePath = workspacePath + activeWebpackage + '/manifest.webpackage';
 
   grunt.initConfig({
+    githooks: {
+      all: {
+        'pre-commit': 'eslint'
+      }
+    },
     eslint: {
       all: [
         'Gruntfile.js',
@@ -26,6 +31,7 @@ module.exports = function (grunt) {
         configFile: '.eslintrc'
       }
     },
+
     // Before generating any new files, remove any previously-created files.
     clean: {
       tests: [ 'tmp' ]
@@ -55,6 +61,7 @@ module.exports = function (grunt) {
         openBrowser: true
       }
     },
+
     // the option used within the devtools to load the workspace-config
     workspacePath: workspacePath,
     workspaceConfigPath: workspaceConfigPath,
@@ -70,6 +77,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-http-server');
+  grunt.loadNpmTasks('grunt-githooks');
 
   // By default, lint and run all tests.
   grunt.registerTask('default', [ 'eslint' ]);
