@@ -1,7 +1,7 @@
 {
   "name": "cubx-grunt-webpackage-scaffold",
   "description": "Tool to scaffold a cubbles-webpackage within the coder-devtools.",
-  "version": "2.8.0",
+  "version": "2.7.1",
   "homepage": "",
   "author": "Hd Böhlau <hans-dieter.boehlau@incowia.com>",
   "contributors": [
@@ -21,6 +21,8 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
+    "prepublish": "npm run-script lint",
+    "lint": "eslint lib/**/*.js skeletons/**/*.js *.js",
     "test": "grunt test"
   },
   "dependencies": {
