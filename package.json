@@ -22,8 +22,8 @@
   },
   "scripts": {
     "prepublish": "npm run-script lint",
-    "lint": "eslint lib/**/*.js skeletons/**/*.js *.js",
-    "test": "grunt test"
+    "preversion": "npm run-script lint",
+    "lint": "eslint lib/**/*.js skeletons/**/*.js *.js"
   },
   "dependencies": {
     "cubx-webpackage-document-api": "^3.0.0",
