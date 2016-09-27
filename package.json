@@ -1,11 +1,12 @@
 {
   "name": "cubx-grunt-webpackage-scaffold",
   "description": "Tool to scaffold a cubbles-webpackage within the coder-devtools.",
-  "version": "2.9.0",
+  "version": "2.9.1",
   "homepage": "",
   "author": "Hd Böhlau <hans-dieter.boehlau@incowia.com>",
   "contributors": [
-    "Judit Ross <judit.ross@incowia.com>"
+    "Judit Ross <judit.ross@incowia.com>",
+    "Philipp Wagner <philipp.wagner@incowia.com>"
   ],
   "repository": {
     "type": "git",

@@ -28,7 +28,7 @@
         <h1>&lt;{{artifactId}}&gt; generated documentation</h1>
     </div>
     <div cubx-core-crc class="row">
-        <cubx-component-docs-viewer cubx-webpackage-id="com.incowia.cubx-webpackage-viewer@1.3.0">
+        <cubx-component-docs-viewer cubx-webpackage-id="com.incowia.cubx-webpackage-viewer@1.3.2">
         </cubx-component-docs-viewer>
     </div>
 </div>
@@ -37,10 +37,13 @@
     var componentDocsViewer = document.getElementsByTagName('cubx-component-docs-viewer')[0];
     var manifestUrl = "../../manifest.webpackage";
     document.addEventListener('cifReady', function() {
-        $.getJSON(manifestUrl, function (response) {
-            componentDocsViewer.setManifest(response);
-            componentDocsViewer.setComponentArtifactId('{{artifactId}}');
-        });
+        // workaround until RTE-7 is fixed
+        window.setTimeout(function () {
+            $.getJSON(manifestUrl, function (response) {
+                componentDocsViewer.setManifest(response);
+                componentDocsViewer.setComponentArtifactId('{{artifactId}}');
+            });
+        }, 250);
     });
 </script>
 </body>

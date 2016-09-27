@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>&ltelem-one&gt; generated documentation</title>
+    <title>&lt;elem-one&gt; generated documentation</title>
 
     <script src="../../../cubx.core.rte@2.0.1/webcomponents-lite/webcomponents-lite.js"></script>
 
@@ -30,7 +30,7 @@
         <h1>&lt;elem-one&gt; generated documentation</h1>
     </div>
     <div cubx-core-crc class="row">
-        <cubx-component-docs-viewer cubx-webpackage-id="com.incowia.cubx-webpackage-viewer@1.3.0">
+        <cubx-component-docs-viewer cubx-webpackage-id="com.incowia.cubx-webpackage-viewer@1.3.2">
         </cubx-component-docs-viewer>
     </div>
 </div>
@@ -39,10 +39,13 @@
     var componentDocsViewer = document.getElementsByTagName('cubx-component-docs-viewer')[0];
     var manifestUrl = "../../manifest.webpackage";
     document.addEventListener('cifReady', function() {
-        $.getJSON(manifestUrl, function (response) {
-            componentDocsViewer.setManifest(response);
-            componentDocsViewer.setComponentArtifactId('elem-one');
-        });
+        // workaround until RTE-7 is fixed
+        window.setTimeout(function () {
+            $.getJSON(manifestUrl, function (response) {
+                componentDocsViewer.setManifest(response);
+                componentDocsViewer.setComponentArtifactId('elem-one');
+            });
+        }, 250);
     });
 </script>
 </body>
