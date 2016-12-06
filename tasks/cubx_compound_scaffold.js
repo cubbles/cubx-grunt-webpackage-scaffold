@@ -34,7 +34,7 @@ module.exports = function (grunt) {
           ],
           slots: [
             {
-              slotId: 'outdoor-temperature',
+              slotId: 'outdoorTemperature',
               type: 'number',
               direction: [
                 'input',
@@ -51,7 +51,7 @@ module.exports = function (grunt) {
             {
               connectionId: 'temperature-transfer',
               source: {
-                slot: 'outdoor-temperature'
+                slot: 'outdoorTemperature'
               },
               destination: {
                 memberIdRef: 'member1',
@@ -60,7 +60,7 @@ module.exports = function (grunt) {
             } ],
           inits: [
             {
-              slot: 'outdoor-temperature',
+              slot: 'outdoorTemperature',
               value: 0
             }
           ]
