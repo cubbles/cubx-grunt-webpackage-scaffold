@@ -6,3 +6,9 @@
 
 # default patterns
 **/*.log
+
+**/.eslintignore
+**/.eslintrc
+**/.cubblesignore
+**/.bowerrc
+**/.webpackage
