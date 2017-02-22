@@ -9,6 +9,6 @@
 
 **/.eslintignore
 **/.eslintrc
-**/.cubblesignore
+.cubblesignore
 **/.bowerrc
-**/.webpackage
+.webpackage
