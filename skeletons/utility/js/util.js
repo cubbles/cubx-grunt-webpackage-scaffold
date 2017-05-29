@@ -1,4 +1,4 @@
-/*globals alert*/
+/* globals alert */
 'use strict';
 function newContent () {
   alert('changing background color');
