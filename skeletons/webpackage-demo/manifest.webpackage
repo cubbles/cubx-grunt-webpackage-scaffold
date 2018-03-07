@@ -53,6 +53,7 @@
           }
         ],
         "resources": [
+          "elem-one.css",
           "elem-one.html"
         ],
         "dependencies": [

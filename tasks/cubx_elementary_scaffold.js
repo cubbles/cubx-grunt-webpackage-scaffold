@@ -24,6 +24,7 @@ module.exports = function (grunt) {
             }
           ],
           resources: [
+            answers.artifactId + '.css',
             answers.artifactId + '.html'
           ],
           dependencies: [
