@@ -33,16 +33,7 @@ module.exports = function (grunt) {
               artifactId: 'cubxpolymer'
             }
           ],
-          slots: [
-            {
-              slotId: 'a',
-              type: 'number',
-              direction: [
-                'input',
-                'output'
-              ],
-              value: 10
-            } ]
+          slots: []
         };
 
         // make sure the artifact-type section does exist

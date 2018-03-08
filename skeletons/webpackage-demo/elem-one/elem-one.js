@@ -7,7 +7,7 @@
    *
    * Access the Cubbles-Component-Model:
    * > Access slot values:
-   * slot 'a': this.getA(); | this.setA(value)
+   * slot 'message': this.getMessage(); | this.setMessage(value)
    */
   CubxPolymer({
     is: 'elem-one',
@@ -16,25 +16,25 @@
      * Manipulate an element’s local DOM when the element is constructed.
      */
     ready: function () {
-      // set value-attribute of element with id='slota' to the initial value of slot 'a'
-      this.$.slota.setAttribute('value', this.getA());
+      // set value-attribute of element with id='message' to the initial value of slot 'message'
+      this.$.message.setAttribute('value', this.getMessage());
     },
 
     /**
      * A handler to be called by a dom-element
      * @param {event} event
      */
-    inputFieldSlotAChanged: function (event) {
+    inputFieldMessageChanged: function (event) {
       // update the cubbles-model
-      this.setA(event.target.value);
+      this.setMessage(event.target.value);
     },
 
     /**
-     *  Observe the Cubbles-Component-Model: If value for slot 'a' has changed ...
+     *  Observe the Cubbles-Component-Model: If value for slot 'message' has changed ...
      */
-    modelAChanged: function (newValue) {
+    modelMessageChanged: function (newValue) {
       // update the view
-      this.$.slota.setAttribute('value', newValue);
+      this.$.message.setAttribute('value', newValue);
     }
   });
 }());

@@ -64,13 +64,78 @@
         ],
         "slots": [
           {
-            "slotId": "a",
-            "type": "number",
+            "slotId": "message",
+            "type": "string",
             "direction": [
               "input",
               "output"
             ],
             "value": 10
+          }
+        ]
+      }
+    ],
+    "compoundComponents": [
+      {
+        "artifactId": "compound-two",
+        "description": "This is a compound component.",
+        "resources": [
+            "css/compound-two.css",
+            "compound-two-template.html"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "elem-one"
+          }
+        ],
+        "slots": [
+          {
+           "slotId": "message",
+           "type": "string",
+           "direction": ["input","output"]
+          }
+        ],
+        "members": [
+          {
+           "artifactId": "elem-one",
+           "memberId": "first"
+          },
+          {
+            "artifactId": "elem-one",
+            "memberId": "second"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId" : "compound-message-to-first-message",
+            "source": {
+              "slot" : "message"
+            },
+            "destination": {
+              "memberIdRef" : "first",
+              "slot" : "message"
+            }
+          },
+          {
+            "connectionId" : "first-message-to-second-message",
+            "source": {
+              "memberIdRef" : "first",
+              "slot" : "message"
+            },
+            "destination": {
+              "memberIdRef" : "second",
+              "slot" : "message"
+            }
+          },
+          {
+            "connectionId" : "second-message-to-compound-message",
+            "source": {
+              "memberIdRef" : "second",
+              "slot" : "message"
+            },
+            "destination": {
+              "slot" : "message"
+            }
           }
         ]
       }
