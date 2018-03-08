@@ -12,19 +12,19 @@
         * rootDependencies //a string array; string pattern: webpackageId/artifactId/endpointId
         ** to refer to artifacts of this webpackage, use 'this' as webpackageId
     -->
-    <script>
-        window.cubx = {
-            CRCInit: {
-                rootDependencies: [
-                    {
-                        // webpackgeId='xxx@1.2.3' use this attribute, if the dependny not in own webpackage
-                        artifactId: 'util1'
-                    }
-
-                ]
-            }
-        }
-    </script>
+    <!--// <script>-->
+        <!--// window.cubx = {-->
+        <!--//     CRCInit: {-->
+        <!--//         rootDependencies: [-->
+        <!--//             {-->
+        <!--//                 // webpackgeId='xxx@1.2.3' use this attribute, if the dependny not in own webpackage-->
+        <!--//                 artifactId: 'util1'-->
+        <!--//             }-->
+        <!--//-->
+        <!--//         ]-->
+        <!--//     }-->
+        <!--// }-->
+    <!--// </script>-->
 
     <!--
             Refer to the crc-loader artifact from a Cubbles-Base.
@@ -40,7 +40,7 @@
 <!--  Place cubbles components there. -->
 <h1>Hello World!</h1>
 
-<elem-one cubx-webpackage="this"></elem-one>
+<compound-two cubx-webpackage="this"></compound-two>
 
 </body>
 </html>

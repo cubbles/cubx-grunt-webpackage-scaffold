@@ -28,7 +28,7 @@
     "lint": "eslint lib/**/*.js skeletons/**/*.js *.js"
   },
   "dependencies": {
-    "cubx-webpackage-document-api": "^3.0.0",
+    "cubx-webpackage-document-api": "^3.4.0",
     "grunt-githooks": "^0.6.0",
     "inquirer": "^0.8.5",
     "lodash": "^3.10",

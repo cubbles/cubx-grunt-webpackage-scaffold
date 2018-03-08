@@ -24,46 +24,15 @@ module.exports = function (grunt) {
             }
           ],
           resources: [
-            'css/' + answers.artifactId + '.css'
+            'css/' + answers.artifactId + '.css',
+            answers.artifactId + '-template.html'
           ],
           dependencies: [
-            {
-              webpackageId: 'my-webpackage@1.2.3',
-              artifactId: 'my-artifact'
-            }
           ],
-          slots: [
-            {
-              slotId: 'outdoorTemperature',
-              type: 'number',
-              direction: [
-                'input',
-                'output'
-              ]
-            } ],
-          members: [
-            {
-              memberId: 'member1',
-              artifactId: 'my-artifact'
-            }
-          ],
-          connections: [
-            {
-              connectionId: 'temperature-transfer',
-              source: {
-                slot: 'outdoorTemperature'
-              },
-              destination: {
-                memberIdRef: 'member1',
-                slot: 'temperatureIn'
-              }
-            } ],
-          inits: [
-            {
-              slot: 'outdoorTemperature',
-              value: 0
-            }
-          ]
+          slots: [],
+          members: [],
+          connections: [],
+          inits: []
         };
 
         // make sure the artifact-type section does exist

@@ -12,7 +12,7 @@ module.exports = function (grunt) {
         description: answers.description,
         runnables: [
           {
-            name: 'My Hello World App.',
+            name: answers.artifactId,
             path: '/index.html',
             description: 'Call this app as a simple demo.'
           }
