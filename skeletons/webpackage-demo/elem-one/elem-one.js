@@ -9,15 +9,19 @@
    * > Access slot values:
    * slot 'message': this.getMessage(); | this.setMessage(value)
    */
-  CubxPolymer({
+  CubxComponent({
     is: 'elem-one',
 
+    listener: {
+      'message.change': 'inputFieldMessageChanged',
+      'change': 'changeListener'
+    },
     /**
      * Manipulate an element’s local DOM when the element is constructed.
      */
     ready: function () {
       // set value-attribute of element with id='message' to the initial value of slot 'message'
-      this.$.message.setAttribute('value', this.getMessage());
+      this.$.message.value = this.getMessage();
     },
 
     /**
@@ -34,7 +38,14 @@
      */
     modelMessageChanged: function (newValue) {
       // update the view
-      this.$.message.setAttribute('value', newValue);
+      this.$.message.value = newValue;
+    },
+    /**
+     * A handler to be called by all subtree changes.
+     * @param {event} event
+     */
+    changeListener: function (event) {
+      console.log('A value changed from ' + event.target);
     }
   });
 }());

@@ -6,7 +6,7 @@
    * https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html#lifecycle-callbacks
    *
    */
-  CubxPolymer({
+  CubxComponent({
     is: '{{artifactId}}',
 
     /**
@@ -24,13 +24,19 @@
     /**
      * Manipulate an element’s local DOM when the element is attached to the document.
      */
-    attached: function () {
+    connected: function () {
+    },
+
+    /**
+     * Manipulate an element’s local DOM when the element is dettached to the document.
+     */
+    disconnected: function () {
     },
 
     /**
      * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
      */
-    cubxReady: function () {
+    contextReady: function () {
     }
 
     /**
