@@ -1,9 +1,7 @@
 (function () {
   'use strict';
   /**
-   * Get help:
-   * > Lifecycle callbacks:
-   * https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html#lifecycle-callbacks
+   * Lifecycle-Methods: created, ready, connected, disconnected, contextReady
    *
    * Access the Cubbles-Component-Model:
    * > Access slot values:

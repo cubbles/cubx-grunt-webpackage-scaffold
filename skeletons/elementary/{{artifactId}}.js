@@ -1,11 +1,6 @@
 (function () {
   'use strict';
-  /**
-   * Get help:
-   * > Lifecycle callbacks:
-   * https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html#lifecycle-callbacks
-   *
-   */
+
   CubxComponent({
     is: '{{artifactId}}',
 
