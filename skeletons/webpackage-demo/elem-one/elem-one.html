@@ -1,14 +1,11 @@
-<dom-module id="elem-one">
+<template id="elem-one">
+    <p>elem-one</p>
+    <section>
+        <article>
+            <label for="message">Slot a</label>
+            <input type="text" id="message" on-change="inputFieldMessageChanged">
+        </article>
+    </section>
+</template>
 
-    <template>
-        <p>elem-one</p>
-        <section>
-            <article>
-                <label for="message">Slot a</label>
-                <input type="text" id="message" on-change="inputFieldMessageChanged">
-            </article>
-        </section>
-    </template>
-
-    <script src="elem-one.js"></script>
-</dom-module>
+<script src="elem-one.js"></script>

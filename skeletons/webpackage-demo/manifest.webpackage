@@ -2,7 +2,7 @@
   "name": "{{wpName}}",
   "groupId": "{{wpGroupId}}",
   "version": "0.1.0-SNAPSHOT",
-  "modelVersion": "9.1.2",
+  "modelVersion": "10.0.0",
   "docType": "webpackage",
   "author": {
     "name": "{{wpAuthorName}}",
@@ -39,7 +39,7 @@
     "elementaryComponents": [
       {
         "artifactId": "elem-one",
-        "description": "This is an elementary-component based on Polymer.",
+        "description": "This is an cubbles-elementary-component.",
         "runnables": [
           {
             "name": "demo",
@@ -58,8 +58,8 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": [
@@ -78,7 +78,7 @@
     "compoundComponents": [
       {
         "artifactId": "compound-two",
-        "description": "This is a compound component.",
+        "description": "This is a cubbles-compound-component.",
         "resources": [
             "css/compound-two.css",
             "compound-two-template.html"
