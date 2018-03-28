@@ -2,7 +2,7 @@
   "name": "{{wpName}}",
   "groupId": "{{wpGroupId}}",
   "version": "0.1.0-SNAPSHOT",
-  "modelVersion": "9.1.2",
+  "modelVersion": "10.0.0",
   "docType": "webpackage",
   "author": {
     "name": "{{wpAuthorName}}",
