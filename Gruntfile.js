@@ -76,7 +76,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('gruntify-eslint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
-  grunt.loadNpmTasks('grunt-http-server');
   grunt.loadNpmTasks('grunt-githooks');
 
   // By default, lint and run all tests.

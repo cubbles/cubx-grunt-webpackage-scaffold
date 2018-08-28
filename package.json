@@ -29,11 +29,11 @@
   },
   "dependencies": {
     "cubx-webpackage-document-api": "^3.4.0",
+    "fs-extra": "^7.0.0",
     "inquirer": "^6.2.0",
     "lodash": "^4.17.0",
     "mustache": "^2.3.2",
-    "wordwrap": "^1.0.0",
-    "wrench": "^1.5.9"
+    "wordwrap": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^5.4.0",
@@ -46,7 +46,6 @@
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-nodeunit": "^2.0.0",
     "grunt-githooks": "^0.6.0",
-    "grunt-http-server": "^2.1.0",
     "gruntify-eslint": "^5.0.0"
   },
   "peerDependencies": {
