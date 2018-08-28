@@ -1,4 +1,4 @@
-/*global module,require*/
+/* global module,require */
 'use strict';
 var utils = require('../lib/utils');
 module.exports = function (grunt) {

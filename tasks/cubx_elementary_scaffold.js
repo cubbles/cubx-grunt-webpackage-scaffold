@@ -1,4 +1,4 @@
-/*global module,require*/
+/* global module,require */
 'use strict';
 var utils = require('../lib/utils');
 module.exports = function (grunt) {
@@ -40,7 +40,6 @@ module.exports = function (grunt) {
         if (!manifest.artifacts.elementaryComponents) {
           manifest.artifacts.elementaryComponents = [];
         }
-
         // add or replace the artifact
         var index = utils.arrayObjectIndexOf(manifest.artifacts.elementaryComponents, 'artifactId',
           artifactObject.artifactId);
@@ -53,6 +52,7 @@ module.exports = function (grunt) {
             'Replacing the artifact within manifest.webpackage: ' + artifactObject.artifactId);
           manifest.artifacts.elementaryComponents.splice(index, 1, artifactObject);
         }
+
         grunt.file.write(manifestWebpackagePath, JSON.stringify(manifest, null, 2));
         done();
       };
