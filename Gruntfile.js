@@ -16,11 +16,6 @@ module.exports = function (grunt) {
   var manifestWebpackagePath = workspacePath + activeWebpackage + '/manifest.webpackage';
 
   grunt.initConfig({
-    githooks: {
-      all: {
-        'pre-commit': 'eslint'
-      }
-    },
     eslint: {
       all: [
         'Gruntfile.js',
@@ -42,26 +37,6 @@ module.exports = function (grunt) {
       tests: [ 'test/*_test.js' ]
     },
 
-    'http-server': {
-      dev: {
-        root: 'test/webpackages',
-        port: 8282,
-        host: 'localhost',
-        cache: 1,
-        showDir: true,
-        autoIndex: true,
-        // server default file extension
-        ext: 'html',
-        // run in parallel with other tasks
-        runInBackground: false,
-        // Proxies all requests which can't be resolved locally to the given url
-        // Note: this will disable 'showDir'
-        proxy: 'https://webblebase.net',
-        // Tell grunt task to open the browser
-        openBrowser: true
-      }
-    },
-
     // the option used within the devtools to load the workspace-config
     workspacePath: workspacePath,
     workspaceConfigPath: workspaceConfigPath,
@@ -76,7 +51,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('gruntify-eslint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
-  grunt.loadNpmTasks('grunt-http-server');
   grunt.loadNpmTasks('grunt-githooks');
 
   // By default, lint and run all tests.
