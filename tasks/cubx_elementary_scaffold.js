@@ -29,7 +29,7 @@ module.exports = function (grunt) {
           ],
           dependencies: [
             {
-              webpackageId: 'cubx.core.rte@2.5.2',
+              webpackageId: 'cubx.core.rte@2.6.0',
               artifactId: 'cubxpolymer'
             }
           ],
