@@ -12,7 +12,7 @@
 
     listener: {
       'message.change': 'inputFieldMessageChanged',
-      'change': 'changeListener'
+      change: 'changeListener'
     },
     /**
      * Manipulate an element’s local DOM when the element is constructed.

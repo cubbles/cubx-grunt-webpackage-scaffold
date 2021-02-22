@@ -10,10 +10,10 @@
 
 module.exports = function (grunt) {
   // Project configuration.
-  var workspacePath = 'test/webpackages/';
-  var workspaceConfigPath = workspacePath + '.workspace';
-  var activeWebpackage = grunt.file.readJSON(workspaceConfigPath).activeWebpackage;
-  var manifestWebpackagePath = workspacePath + activeWebpackage + '/manifest.webpackage';
+  const workspacePath = 'test/webpackages/';
+  const workspaceConfigPath = workspacePath + '.workspace';
+  const activeWebpackage = grunt.file.readJSON(workspaceConfigPath).activeWebpackage;
+  const manifestWebpackagePath = workspacePath + activeWebpackage + '/manifest.webpackage';
 
   grunt.initConfig({
     eslint: {
@@ -29,12 +29,12 @@ module.exports = function (grunt) {
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: [ 'tmp' ]
+      tests: ['tmp']
     },
 
     // Unit tests.
     nodeunit: {
-      tests: [ 'test/*_test.js' ]
+      tests: ['test/*_test.js']
     },
 
     // the option used within the devtools to load the workspace-config
@@ -54,5 +54,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-githooks');
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', [ 'eslint' ]);
+  grunt.registerTask('default', ['eslint']);
 };
