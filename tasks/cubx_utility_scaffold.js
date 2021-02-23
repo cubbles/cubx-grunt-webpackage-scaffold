@@ -1,13 +1,13 @@
 /* global module,require */
 'use strict';
-var utils = require('../lib/utils');
+const utils = require('../lib/utils');
 module.exports = function (grunt) {
   // define a task starting with '+' if your task should be listed as one of the top tasks
   grunt.registerTask('+webpackage-createUtility', 'Scaffold a new Utility in a Webpackage.', function () {
-    var updateManifest = function (answers, done) {
-      var manifestWebpackagePath = grunt.config.get('manifestWebpackagePath');
-      var manifest = grunt.file.readJSON(manifestWebpackagePath);
-      var artifactObject = {
+    const updateManifest = function (answers, done) {
+      const manifestWebpackagePath = grunt.config.get('manifestWebpackagePath');
+      const manifest = grunt.file.readJSON(manifestWebpackagePath);
+      const artifactObject = {
         artifactId: answers.artifactId,
         description: answers.description,
         resources: [
@@ -22,7 +22,7 @@ module.exports = function (grunt) {
       }
 
       // add or replace the artifact
-      var index = utils.arrayObjectIndexOf(manifest.artifacts.utilities, 'artifactId',
+      const index = utils.arrayObjectIndexOf(manifest.artifacts.utilities, 'artifactId',
         artifactObject.artifactId);
       if (index < 0) {
         grunt.verbose.writeln(
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
       done();
     };
 
-    var options = require('../lib/config/utility-options.js')(grunt);
+    const options = require('../lib/config/utility-options.js')(grunt);
     require('../lib/scaffolder.js')(grunt, this, options, updateManifest);
   });
 };

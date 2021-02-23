@@ -5,10 +5,10 @@ module.exports = function (grunt) {
   // define a task starting with '+' if your task should be listed as one of the top tasks
   grunt.registerTask('+webpackage-createElementary', 'Scaffold a new Elementary-Component in a Webpackage.',
     function () {
-      var updateManifest = function (answers, done) {
-        var manifestWebpackagePath = grunt.config.get('manifestWebpackagePath');
-        var manifest = grunt.file.readJSON(manifestWebpackagePath);
-        var artifactObject = {
+      const updateManifest = function (answers, done) {
+        const manifestWebpackagePath = grunt.config.get('manifestWebpackagePath');
+        const manifest = grunt.file.readJSON(manifestWebpackagePath);
+        const artifactObject = {
           artifactId: answers.artifactId,
           description: answers.description,
           runnables: [
@@ -41,7 +41,7 @@ module.exports = function (grunt) {
           manifest.artifacts.elementaryComponents = [];
         }
         // add or replace the artifact
-        var index = utils.arrayObjectIndexOf(manifest.artifacts.elementaryComponents, 'artifactId',
+        const index = utils.arrayObjectIndexOf(manifest.artifacts.elementaryComponents, 'artifactId',
           artifactObject.artifactId);
         if (index < 0) {
           grunt.verbose.writeln(
@@ -57,7 +57,7 @@ module.exports = function (grunt) {
         done();
       };
 
-      var options = require('../lib/config/elementary-options.js')(grunt);
+      const options = require('../lib/config/elementary-options.js')(grunt);
       require('../lib/scaffolder.js')(grunt, this, options, updateManifest);
     });
 };
